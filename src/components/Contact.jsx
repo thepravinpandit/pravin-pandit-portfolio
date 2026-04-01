@@ -3,8 +3,6 @@ import { motion, useReducedMotion } from 'framer-motion'
 import {
   BarChart3,
   Bot,
-  CalendarDays,
-  Phone,
   Github,
   Linkedin,
   Mail,
@@ -159,28 +157,6 @@ export default function Contact({ contact, content }) {
                 <span className="min-w-0 truncate">{contact.email}</span>
               </a>
 
-              {contact.phone && (
-                <a
-                  href={`tel:${contact.phone.replace(/\D/g, '+')}`}
-                  className="glass-card interactive-card flex items-center gap-3 rounded-xl px-4 py-3 text-sm text-secondary"
-                  aria-label="Call phone number"
-                >
-                  <Phone size={16} className="shrink-0 text-accent" />
-                  {contact.phone}
-                </a>
-              )}
-
-              <a
-                href={contact.calendly}
-                target="_blank"
-                rel="noreferrer"
-                onClick={() => trackCtaClick('schedule_call', 'contact')}
-                className="glass-card interactive-card flex items-center gap-3 rounded-xl px-4 py-3 text-sm text-secondary"
-                aria-label="Schedule a call"
-              >
-                <CalendarDays size={16} className="shrink-0 text-accent" />
-                Schedule a Call
-              </a>
             </div>
 
             {/* Social links — 2-col grid on all sizes */}

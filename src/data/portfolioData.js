@@ -47,7 +47,6 @@ export const portfolioData = {
   footerTagline: 'Associate Process Manager | AI Engineer',
   contact: {
     email: 'pravin.h.pandit@gmail.com',
-    phone: '+91-9657948419',
     linkedin: 'https://www.linkedin.com/in/pravinpandit',
     github: 'https://github.com/thepravinpandit',
     twitter: 'https://x.com/impravin0708',
