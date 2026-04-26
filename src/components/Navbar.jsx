@@ -7,12 +7,15 @@ const EASE_OUT = { duration: 0.28, ease: [0.16, 1, 0.3, 1] }
 export default function Navbar({ name, theme, onToggleTheme, navSections, activeSection, onNavigate, scrolled }) {
   const [isOpen, setIsOpen] = useState(false)
 
-  const handleNav = (id) => { onNavigate(id); setIsOpen(false) }
+  const handleNav = (id) => { 
+    setIsOpen(false); 
+    setTimeout(() => onNavigate(id), 10); 
+  }
 
   return (
     <header
       data-navbar="true"
-      className={`sticky top-0 z-50 border-b transition-all duration-300 ${
+      className={`fixed left-0 right-0 top-0 z-50 border-b transition-all duration-300 ${
         scrolled
           ? 'border-ringline/70 bg-page/95 py-1 shadow-[0_1px_24px_rgba(0,0,0,0.12)] backdrop-blur-2xl'
           : 'border-transparent bg-page/80 py-2.5 backdrop-blur-xl'

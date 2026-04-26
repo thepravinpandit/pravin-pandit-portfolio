@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { motion, useInView, useReducedMotion } from 'framer-motion'
 import { ArrowRight, Download, MapPin, Sparkles, Zap } from 'lucide-react'
-import VisitorBadge from './VisitorBadge'
 import { scrollToSection } from '../utils/scroll'
 import { trackCtaClick } from '../utils/analytics'
 
@@ -117,7 +116,6 @@ export default function Hero({ data }) {
                 <Sparkles size={12} />
                 {data.heroLabels.badge}
               </motion.p>
-              <VisitorBadge counter={data.visitorCounter} />
             </div>
 
             {/* Name — large on desktop, comfortable on mobile */}
